@@ -1,0 +1,24 @@
+<div class="row cards-panel">
+  <div class="col-sm-12">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1 class="panel-title">{{ title }}</h1>
+      </div>
+    </div>
+
+    <div class="row">
+      <div
+        class="col-sm-12"
+        *ngFor="let card of cards"
+        (click)="cardClicked(card)"
+      >
+        <div class="credit-card">
+          <div>{{ card.cardType }}</div>
+          <div>{{ card.getMaskedCardNumber() }}</div>
+          <div>Valid Thru: {{ card.validUpto }}</div>
+        </div>
+          
+      </div>
+    </div>
+  </div>
+</div>

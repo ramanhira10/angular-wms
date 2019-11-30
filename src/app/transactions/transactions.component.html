@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col-sm-12">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2>Current balance: {{currentBalance}}</h2>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <div
+                    class="transaction"
+                    *ngFor="let transaction of transactions"
+                >
+                    <div>
+                        <p>{{transaction.transactionName}}</p>
+                        <p>{{transaction.transactionType}} {{transaction.transactionNumber}} - {{transaction.transactionDate}}</p>
+                    </div>
+                    <div>
+                        <p>{{transaction.amount}}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
